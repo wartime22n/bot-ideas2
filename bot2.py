@@ -70,7 +70,7 @@ liste = {
 @bot.command()
 async def rastgele(ctx):
     her = random.choice(list(liste))
-    await ctx.send(her)
+    await ctx.send(f'{her} nin sogrulma suresi {liste[her]} yildir')
     img_name2 = random.choice(os.listdir('recyle'))
     with open(f'recyle/{img_name2}', 'rb') as f:
         picture = discord.File(f)
