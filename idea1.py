@@ -1,6 +1,10 @@
 import discord, random, os, requests
 from discord.ext import commands
 import emoji
+intents = discord.Intents.default()
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='$', intents=intents)
 
 liste = {
     "cam": 4000,
